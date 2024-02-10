@@ -1,3 +1,6 @@
+!/bin/bash
+cd $HOME
+
 # Download Python 3.11.4 from the Python website
 wget https://www.python.org/ftp/python/3.11.4/Python-3.11.4.tgz
 
@@ -21,8 +24,9 @@ rm -r -f Python-3.11.4
 # Save the currently installed Python packages to a file named "requirements_new.txt"
 pip freeze > requirements_new.txt
 
+rm -rf ./local/bin/python311
 # Create a symbolic link to the Python 3.11 executable in the local/bin directory
-ln -s /local/bin/python3.11 ./local/bin/python311
+ln -s ./local/bin/python3.11 ./local/bin/python311
 
 # Display the version of Python 3.11
 ./local/bin/python3.11 -V
