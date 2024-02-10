@@ -1,3 +1,5 @@
+cd $HOME
+
 # Download Python 3.11.4 from the Python website
 wget https://www.python.org/ftp/python/3.11.4/Python-3.11.4.tgz
 
