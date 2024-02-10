@@ -1,6 +1,7 @@
 ### Quick start
 
 ```` Shell
+toolforge jobs delete install
 rm -rf install.sh
 wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/install.sh
 chmod -R 6770 install.sh
