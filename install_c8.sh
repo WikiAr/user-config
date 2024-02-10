@@ -24,10 +24,10 @@ cp /data/project/himo/core8/404-links.txt ./c8/404-links.txt
 # Set the file permissions to 6770 for the c8 directory and its contents
 chmod -R 6770 ./c8
 
-rm -rf ./user-config.py
+# rm -rf ./user-config.py
 
 # download https://github.com/MrIbrahem/user-config/blob/main/user-config.py to user-config.py
-wget https://github.com/MrIbrahem/user-config/blob/main/user-config.py
+# wget https://github.com/MrIbrahem/user-config/blob/main/user-config.py
 
 chmod -R 6770 ./user-config.py
 
