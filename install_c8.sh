@@ -1,3 +1,6 @@
+!/bin/bash
+cd $HOME
+
 # Remove the master.zip file
 rm master.zip
 
