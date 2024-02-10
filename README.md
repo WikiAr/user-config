@@ -1,4 +1,4 @@
-.. code:: sh
+.. code:: shell
 
 	rm -rf install.sh
 	
