@@ -6,6 +6,7 @@ wget https://github.com/wikimedia/pywikibot/archive/refs/heads/master.zip
 
 # Unzip the downloaded master.zip file
 unzip master.zip
+rm master.zip
 
 # Rename the extracted pywikibot-master directory to c8
 mv pywikibot-master c8
