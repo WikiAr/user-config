@@ -1,3 +1,6 @@
+!/bin/bash
+cd $HOME
+
 wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/py_3114.sh
 
 chmod -R 6770 py_3114.sh
