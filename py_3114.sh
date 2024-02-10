@@ -3,6 +3,7 @@ wget https://www.python.org/ftp/python/3.11.4/Python-3.11.4.tgz
 
 # Extract the downloaded archive
 tar xzf Python-3.11.4.tgz
+rm Python-3.11.4.tgz
 
 # Navigate to the extracted directory
 cd Python-3.11.4
