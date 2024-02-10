@@ -1,7 +1,7 @@
 Quick start
 ===========
 
-.. code:: text
+.. code:: shell
 
 	rm -rf install.sh
 	wget https://github.com/MrIbrahem/user-config/blob/main/install.sh
