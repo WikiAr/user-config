@@ -29,5 +29,7 @@ rm -rf ./user-config.py
 # download https://github.com/MrIbrahem/user-config/blob/main/user-config.py to user-config.py
 wget https://github.com/MrIbrahem/user-config/blob/main/user-config.py
 
+chmod -R 6770 ./user-config.py
+
 # Run the pwb.py script with the API/txtlib argument using Python 3.11
 python3.11 c8/pwb.py API/txtlib
