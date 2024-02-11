@@ -26,8 +26,8 @@ chmod -R 6770 ./c8
 
 # rm -rf ./user-config.py
 
-# download https://github.com/MrIbrahem/user-config/blob/main/user-config.py to user-config.py
-# wget https://github.com/MrIbrahem/user-config/blob/main/user-config.py
+# download https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py to user-config.py
+# wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py
 
 chmod -R 6770 ./user-config.py
 
