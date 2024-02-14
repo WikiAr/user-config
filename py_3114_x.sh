@@ -24,9 +24,10 @@ rm -r -f Python-3.11.4
 # Save the currently installed Python packages to a file named "requirements_new.txt"
 pip freeze > requirements_new.txt
 
-rm -rf ./local/bin/python311
-# Create a symbolic link to the Python 3.11 executable in the local/bin directory
+rm -rf ./localx/bin/python311
+# Create a symbolic link to the Python 3.11 executable in the localx/bin directory
 ln -s $HOME/localx/bin/python3.11 $HOME/localx/bin/python311
+ln -s $HOME/localx/bin/python3.11 $HOME/localx/bin/python3
 
 # Display the version of Python 3.11
 ./localx/bin/python3.11 -V
@@ -40,12 +41,15 @@ ln -s $HOME/localx/bin/python3.11 $HOME/localx/bin/python311
 
 # Install the Python packages
 ./localx/bin/python3.11 -m pip install -r requirements_new.txt
+./localx/bin/python3.11 -m pip install -r c8/requirements.txt
 
 ./localx/bin/python3.11 -m pip list --outdated
-./localx/bin/python3.11 -m pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+./localx/bin/python3.11 -m pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 ./localx/bin/pip3.11 install -U
 
 
 # Install packages
 ./localx/bin/python3.11 -m pip install wikitextparser
 ./localx/bin/python3.11 -m pip install python-dateutil
 # ./localx/bin/python3.11 -m pip install --upgrade regex==2022.10.31
+
+echo 'export PATH=$HOME/localx/bin:$HOME/local/bin:/usr/local/bin:/usr/bin:/bin' > ~/.bash_profile
