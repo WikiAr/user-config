@@ -26,7 +26,7 @@ pip freeze > requirements_new.txt
 
 rm -rf ./local/bin/python311
 # Create a symbolic link to the Python 3.11 executable in the local/bin directory
-ln -s ./local/bin/python3.11 ./local/bin/python311
+ln -s $HOME/local/bin/python3.11 $HOME/local/bin/python311
 
 # Display the version of Python 3.11
 ./local/bin/python3.11 -V
