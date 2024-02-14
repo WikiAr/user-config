@@ -31,7 +31,7 @@ chmod -R 6770 ./c8
 
 chmod -R 6770 ./user-config.py
 
-python3.11 install -r c8/requirements.txt
+python3.11 -m pip install -r c8/requirements.txt
  
 # Run the pwb.py script with the API/txtlib argument using Python 3.11
 python3.11 c8/pwb.py API/txtlib
