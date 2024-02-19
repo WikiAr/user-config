@@ -2,8 +2,14 @@
 cd $HOME
 
 # Download Python 3.11.4 from the Python website
-wget https://www.python.org/ftp/python/3.11.4/Python-3.11.4.tgz
+if [ ! -f Python-3.11.4.tgz ]; then
+    wget https://www.python.org/ftp/python/3.11.4/Python-3.11.4.tgz
+fi
 
+if [ ! -f Python-3.11.4.tgz ]; then
+    echo "Unable to download the Python file. Please ensure your internet connection."
+    exit 1
+fi
 # Extract the downloaded archive
 tar xzf Python-3.11.4.tgz
 rm Python-3.11.4.tgz
@@ -24,10 +30,18 @@ rm -r -f Python-3.11.4
 # Save the currently installed Python packages to a file named "requirements_new.txt"
 pip freeze > requirements_new.txt
 
-rm -rf ./local/bin/python311
+if [ -f "$HOME/local/bin/python3.11" ]; then
+    rm -rf $HOME/local/bin/python3.11
+fi
+
 # Create a symbolic link to the Python 3.11 executable in the local/bin directory
-ln -s $HOME/local/bin/python3.11 $HOME/local/bin/python311
-ln -s $HOME/local/bin/python3.11 $HOME/local/bin/python3
+if [ -f "$HOME/local/bin/python3.11" ]; then
+    ln -s "$HOME/local/bin/python3.11" "$HOME/local/bin/python311"
+    ln -s "$HOME/local/bin/python3.11" "$HOME/local/bin/python3"
+    echo "Symbolic links created successfully."
+else
+    echo "Python 3.11 executable not found. Please make sure it's installed in $HOME/local/bin."
+fi
 
 # Display the version of Python 3.11
 ./local/bin/python3.11 -V
