@@ -30,8 +30,8 @@ rm -r -f Python-3.11.4
 # Save the currently installed Python packages to a file named "requirements_new.txt"
 pip freeze > requirements_new.txt
 
-if [ -f "$HOME/localx/bin/python3.11" ]; then
-    rm -rf $HOME/localx/bin/python3.11
+if [ -f "$HOME/localx/bin/python311" ]; then
+    rm -rf $HOME/localx/bin/python311
 fi
 
 # Create a symbolic link to the Python 3.11 executable in the localx/bin directory
