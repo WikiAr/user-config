@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 cd $HOME
 
 # Download Python 3.11.4 from the Python website
