@@ -68,3 +68,8 @@ fi
 # ./localx/bin/python3.11 -m pip install --upgrade regex==2022.10.31
 
 echo 'export PATH=$HOME/localx/bin:$HOME/local/bin:/usr/local/bin:/usr/bin:/bin' > ~/.bash_profile
+
+
+ln -s /usr/bin/toolforge      $HOME/localx/bin/tf
+ln -s /usr/bin/toolforge-jobs $HOME/localx/bin/tfj
+ln -s /usr/bin/toolforge-webservice $HOME/localx/bin/tfw
