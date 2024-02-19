@@ -4,8 +4,8 @@ himo			1					1
 sanaa			1					1
 mdwiki			1					1
 nccroptool		1					1
+himowd			1					1
+suha			1					1
 
-suha			0					1
 lyan			0					1
 nada			0					1
-himowd			0					1
