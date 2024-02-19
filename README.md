@@ -13,6 +13,7 @@ toolforge jobs list
 # only python 11
 ```` Shell
 rm -rf py_3114_x.sh
+wget https://www.python.org/ftp/python/3.11.4/Python-3.11.4.tgz
 wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/py_3114_x.sh
 chmod -R 6770 py_3114_x.sh
 # sh py_3114_x.sh
