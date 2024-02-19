@@ -50,6 +50,7 @@ ln -s $HOME/localx/bin/python3.11 $HOME/localx/bin/python3
 # Install packages
 ./localx/bin/python3.11 -m pip install wikitextparser
 ./localx/bin/python3.11 -m pip install python-dateutil
+./localx/bin/python3.11 -m pip install certifi --upgrade
 # ./localx/bin/python3.11 -m pip install --upgrade regex==2022.10.31
 
 echo 'export PATH=$HOME/localx/bin:$HOME/local/bin:/usr/local/bin:/usr/bin:/bin' > ~/.bash_profile

@@ -27,6 +27,7 @@ pip freeze > requirements_new.txt
 rm -rf ./local/bin/python311
 # Create a symbolic link to the Python 3.11 executable in the local/bin directory
 ln -s $HOME/local/bin/python3.11 $HOME/local/bin/python311
+ln -s $HOME/local/bin/python3.11 $HOME/local/bin/python3
 
 # Display the version of Python 3.11
 ./local/bin/python3.11 -V
@@ -40,12 +41,16 @@ ln -s $HOME/local/bin/python3.11 $HOME/local/bin/python311
 
 # Install the Python packages
 ./local/bin/python3.11 -m pip install -r requirements_new.txt
+./local/bin/python3.11 -m pip install -r c8/requirements.txt
 
 ./local/bin/python3.11 -m pip list --outdated
-./local/bin/python3.11 -m pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip install -U
+./local/bin/python3.11 -m pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 ./local/bin/pip3.11 install -U
 
 
 # Install packages
 ./local/bin/python3.11 -m pip install wikitextparser
 ./local/bin/python3.11 -m pip install python-dateutil
+./local/bin/python3.11 -m pip install certifi --upgrade
 # ./local/bin/python3.11 -m pip install --upgrade regex==2022.10.31
+
+echo 'export PATH=$HOME/local/bin:$HOME/local/bin:/usr/local/bin:/usr/bin:/bin' > ~/.bash_profile
