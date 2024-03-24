@@ -6,6 +6,6 @@ mdwiki			1					1
 nccroptool		1					1
 himowd			1					1
 suha			1					1
+lyan			1					1
 
-lyan			0					1
-nada			0					1
+nada			1					1
