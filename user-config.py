@@ -12,6 +12,8 @@ password_file = None
 
 user_script_paths = [
     '/data/project/himo/core1/',
+    '/data/project/himo/core-cat/',
+    '/data/project/himo/master2/',
     '/data/project/himo/wd_core/',
 ]
 # ---
