@@ -15,6 +15,7 @@ user_script_paths = [
     '/data/project/himo/core-cat/',
     '/data/project/himo/master2/',
     '/data/project/himo/wd_core/',
+    '/data/project/himo/dump_core/',
 ]
 # ---
 _ver = sys.version_info[:3]
