@@ -11,11 +11,11 @@ db_connect_file = user_home_path('replica.my.cnf')
 password_file = None
 
 user_script_paths = [
-    '/data/project/himo/core1/',
-    '/data/project/himo/core-cat/',
-    '/data/project/himo/master2/',
-    '/data/project/himo/wd_core/',
-    '/data/project/himo/dump_core/'
+    '/data/project/himo/bots/core1/',
+    '/data/project/himo/bots/core-cat/',
+    '/data/project/himo/bots/master2/',
+    '/data/project/himo/bots/wd_core/',
+    '/data/project/himo/bots/dump_core/'
 ]
 # ---
 _ver = sys.version_info[:3]
