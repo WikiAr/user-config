@@ -65,7 +65,7 @@ fi
 # ./local12/bin/python3.12 -m pip install --upgrade regex==2022.10.31
 
 
-./local12/bin/python3.11 -m pip freeze > requirements_311.txt
+./local/bin/python3.11 -m pip freeze > requirements_311.txt
 
 ./local12/bin/python3.12 -m pip install -r requirements_311.txt
 
