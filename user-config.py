@@ -34,11 +34,6 @@ except:
 # ---
 print(_blue_ % 'PYTHON VERSION' + ': ' + _red_ % _python_v, _ver_)
 # ---
-#if _python_v.startswith('311'):
-#    user_script_paths.append('./local/lib/python3.11/site-packages')
-#else:
-#    user_script_paths.append('./local/lib/python3.10/site-packages')
-
 
 for _u_path in user_script_paths.copy():
     if os.path.exists(_u_path):
