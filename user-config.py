@@ -11,6 +11,7 @@ db_connect_file = user_home_path('replica.my.cnf')
 password_file = None
 
 user_script_paths = [
+    '/data/project/himo/bots/mv_bots/',
     '/data/project/himo/bots/ma/',
     '/data/project/himo/bots/core1/',
     '/data/project/himo/bots/core-cat/',
