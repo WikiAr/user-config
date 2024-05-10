@@ -1,34 +1,19 @@
-name: Deploy via SSH # (1) Title of the action
+name: Open URL on Successful Merge
 
 on:
-  push:
-    branches:
-      - main # (2) Name of the branch where the action should run
+  pull_request:
+    types:
+      - closed
 
 jobs:
-  deploy:
-    name: Deploy to SSH Server # (3) Title of the job
+  open-url:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Run deployment script
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: login.toolforge.org
-          username: ${{ secrets.TOOLFORGE_USERNAME }}
-          passphrase: ${{ secrets.TOOLFORGE_PASSPHRASE }}
-          key: ${{ secrets.TOOLFORGE_PRIVATE_KEY}}
-          port: 22
-          request_pty: true
-          script_stop: true
-          # (4) Actual command(s) to run
-          script: |
-            become himo
-            touch github_update.txt
-            whoami
-            # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/himo/user-config.py
-            # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/sanaa/user-config.py
-            # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/lyan/user-config.py
-            # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/suha/user-config.py
-            # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/nada/user-config.py
-            # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/himowd/user-config.py
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Open URL on successful merge
+      if: github.event_name == 'pull_request' && github.event.action == 'closed' && github.event.pull_request.merged == true
+      run: |
+        curl -L -f -S -s https://himo.toolforge.org/update.php?user=1 > curl_output.txt || echo "Curl request failed with status code $?"
