@@ -11,14 +11,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
       - name: Run deployment script
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: login.toolforge.org
           username: ${{ secrets.TOOLFORGE_USERNAME }}
+          passphrase: ${{ secrets.TOOLFORGE_PASSPHRASE }}
           key: ${{ secrets.TOOLFORGE_PRIVATE_KEY}}
           port: 22
           request_pty: true
@@ -27,6 +25,7 @@ jobs:
           script: |
             become himo
             touch github_update.txt
+            whoami
             # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/himo/user-config.py
             # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/sanaa/user-config.py
             # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/lyan/user-config.py
