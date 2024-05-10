@@ -22,6 +22,6 @@ jobs:
 
           host: login-buster.toolforge.org
           username: ${{ secrets.TOOLFORGE_USERNAME }}
-          password: ${{ secrets.TOOLFORGE_PASSPHRASE }}
-          # privateKey: ${{ secrets.TOOLFORGE_PRIVATE_KEY}}
-          privateKey: ${{ secrets.TOOLFORGE_PRIVATE_KEY_OPEN_SSH}}
+          # password: ${{ secrets.TOOLFORGE_PASSPHRASE }}
+          privateKey: ${{ secrets.TOOLFORGE_PRIVATE_KEY}}
+          # privateKey: ${{ secrets.TOOLFORGE_PRIVATE_KEY_OPEN_SSH}}
