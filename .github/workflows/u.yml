@@ -1,16 +1,30 @@
-name: Command via SSH
+name: Deploy via SSH # (1) Title of the action
 
-on: push
+on:
+  push:
+    branches:
+      - main # (2) Name of the branch where the action should run
 
 jobs:
-  build:
+  deploy:
+    name: Deploy to SSH Server # (3) Title of the job
     runs-on: ubuntu-latest
 
     steps:
-      - name: ls -a via OPEN SSH Private Key
-        uses: garygrossgarten/github-action-ssh@release
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run deployment script
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          command: |
+          host: login.toolforge.org
+          username: ${{ secrets.TOOLFORGE_USERNAME }}
+          privateKey: ${{ secrets.TOOLFORGE_PRIVATE_KEY}}
+          port: 22
+          request_pty: true
+          script_stop: true
+          # (4) Actual command(s) to run
+          script: |
             become himo
             touch github_update.txt
             # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/himo/user-config.py
@@ -19,9 +33,3 @@ jobs:
             # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/suha/user-config.py
             # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/nada/user-config.py
             # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/himowd/user-config.py
-
-          host: login-buster.toolforge.org
-          username: ${{ secrets.TOOLFORGE_USERNAME }}
-          # password: ${{ secrets.TOOLFORGE_PASSPHRASE }}
-          privateKey: ${{ secrets.TOOLFORGE_PRIVATE_KEY}}
-          # privateKey: ${{ secrets.TOOLFORGE_PRIVATE_KEY_OPEN_SSH}}
