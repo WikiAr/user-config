@@ -19,7 +19,7 @@ jobs:
         with:
           host: login.toolforge.org
           username: ${{ secrets.TOOLFORGE_USERNAME }}
-          privateKey: ${{ secrets.TOOLFORGE_PRIVATE_KEY}}
+          key: ${{ secrets.TOOLFORGE_PRIVATE_KEY}}
           port: 22
           request_pty: true
           script_stop: true
