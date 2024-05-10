@@ -20,7 +20,8 @@ jobs:
             # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/nada/user-config.py
             # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/himowd/user-config.py
 
-          host: login.toolforge.org
+          host: login-buster.toolforge.org
           username: ${{ secrets.TOOLFORGE_USERNAME }}
           password: ${{ secrets.TOOLFORGE_PASSPHRASE }}
-          privateKey: ${{ secrets.TOOLFORGE_PRIVATE_KEY}}
+          # privateKey: ${{ secrets.TOOLFORGE_PRIVATE_KEY}}
+          privateKey: ${{ secrets.TOOLFORGE_PRIVATE_KEY_OPEN_SSH}}
