@@ -24,8 +24,9 @@ password_file = None
 user_script_paths = [
     '/data/project/himo/bots/mv_bots/',
     '/data/project/himo/bots/ma/',
+    '/data/project/himo/bots/new/',
     '/data/project/himo/bots/core1/',
-    '/data/project/himo/bots/core-cat/',
+    '/data/project/himo/bots/core_cat/',
     '/data/project/himo/bots/master2/',
     '/data/project/himo/bots/wd_core/',
     '/data/project/himo/bots/dump_core/'
