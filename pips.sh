@@ -5,4 +5,4 @@ cd $HOME
 
 pip3 list --outdated
 
-python3 -m pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 pip3 install -U
+$HOME/local/bin/python3.11 -m pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 $HOME/local/bin/pip3 install -U
