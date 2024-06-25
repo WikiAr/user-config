@@ -1,5 +1,13 @@
 ### Quick start
 
+# updte packages
+```` Shell
+wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/pips.sh -O shs/pips.sh
+chmod -R 6770 shs/pips.sh
+toolforge jobs run updatepips --command "$HOME/shs/pips.sh" --image mariadb
+toolforge jobs list
+````
+
 ```` Shell
 toolforge jobs delete install
 rm -rf install.sh
@@ -10,6 +18,7 @@ toolforge jobs run install --mem 1Gi --command "$HOME/install.sh" --image mariad
 toolforge jobs list
 
 ````
+
 # only python 11
 ```` Shell
 rm -rf py_3114_x.sh
