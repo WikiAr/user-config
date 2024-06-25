@@ -2,6 +2,7 @@
 
 # updte packages
 ```` Shell
+rm -rf shs/pips.sh
 wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/pips.sh -O shs/pips.sh
 chmod -R 6770 shs/pips.sh
 toolforge jobs run updatepips --command "$HOME/shs/pips.sh" --image mariadb
