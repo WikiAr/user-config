@@ -1,34 +1,13 @@
 ### Quick start
 
-# python 11
+# python 3.11.4
 ```` Shell
-rm -rf bootstrap_venv.sh
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/bootstrap_venv.sh
-chmod ug+x bootstrap_venv.sh
-toolforge jobs run bootstrap-venv --command "cd $PWD && ./bootstrap_venv.sh" --image python3.11 --wait
+rm -rf py314.sh
+wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/py314.sh
+chmod ug+x py314.sh
+toolforge jobs run py314 --command "cd $PWD && ./py314.sh" --image python3.11
 
-rm -rf py_311.sh
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/py_311.sh
-chmod ug+x py_311.sh
-toolforge jobs run py311 --command "cd $PWD && ./py_311.sh" --image python3.11 --wait
-
-````
-# Extra
-```` Shell
-
-mv pyvenv/lib/python3.11/site-packages pyvenv/lib/python3.11/site-packages1 -v
-
-cp -r local/lib/python3.11/site-packages pyvenv/lib/python3.11
-
-
-mv local old_local -v
-ln -s $HOME/pyvenv $HOME/local -v
-
-
-ln -s /usr/bin/toolforge      $HOME/pyvenv/bin/tf
-ln -s /usr/bin/toolforge-jobs $HOME/pyvenv/bin/tfj
-ln -s /usr/bin/toolforge-webservice $HOME/pyvenv/bin/tfw
-
+./local/bin/python3 -V
 
 ````
 
@@ -42,16 +21,22 @@ toolforge jobs run updatepips --command "$HOME/shs/pips.sh" --image mariadb
 toolforge jobs list
 ````
 
+
+
+# pyvenv
 ```` Shell
-toolforge jobs delete install
-rm -rf install.sh
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/install.sh
-chmod ug+x install.sh
-# sh install.sh
-toolforge jobs run install --mem 1Gi --command "$HOME/install.sh" --image mariadb
-toolforge jobs list
+rm -rf bootstrap_venv.sh
+wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/bootstrap_venv.sh
+chmod ug+x bootstrap_venv.sh
+toolforge jobs run bootstrap-venv --command "cd $PWD && ./bootstrap_venv.sh" --image python3.11 --wait
+
+
+mv pyvenv/lib/python3.11/site-packages pyvenv/lib/python3.11/site-packages1 -v
+
+cp -r local/lib/python3.11/site-packages pyvenv/lib/python3.11
+s
+mv local old_local -v
+ln -s $HOME/pyvenv $HOME/local -v
+
 
 ````
-
-
-
