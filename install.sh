@@ -1,14 +1,14 @@
 !/bin/bash
 cd $HOME
 
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/py_3114.sh
+wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/bootstrap_venv.sh
 
-chmod -R 6770 ./py_3114.sh
+chmod ug+x bootstrap_venv.sh
 
-sh ./py_3114.sh
+sh bootstrap_venv.sh
 
 wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/install_c8.sh
 
-chmod -R 6770 ./install_c8.sh
+chmod ug+x ./install_c8.sh
 
 sh ./install_c8.sh

@@ -7,7 +7,7 @@ set -euo pipefail
 rm -rf pyvenv
 
 # create the venv
-python3 -m venv pyvenv
+/usr/bin/python3 -m venv pyvenv
 
 # activate it
 source pyvenv/bin/activate
@@ -19,4 +19,3 @@ pip install -U pip wheel
 
 # install some concrete packages
 pip install requests packaging wikitextparser python-dateutil certifi --upgrade
-pip install -r requirements_new.txt
