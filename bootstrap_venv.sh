@@ -7,7 +7,8 @@ set -euo pipefail
 rm -rf pyvenv
 
 # create the venv
-/usr/bin/python3 -m venv pyvenv --copies
+/usr/bin/python3 -m venv pyvenv
+# --copies
 
 # activate it
 source pyvenv/bin/activate
