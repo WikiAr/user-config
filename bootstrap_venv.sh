@@ -7,15 +7,13 @@ set -euo pipefail
 rm -rf pyvenv
 
 # create the venv
-/usr/bin/python3 -m venv pyvenv
+/usr/bin/python3 -m venv pyvenv --copies
 
 # activate it
 source pyvenv/bin/activate
 
 # upgrade pip inside the venv and add support for the wheel package format
 pip install -U pip wheel
-
-# Change the following section depending on what your tool needs!
 
 # install some concrete packages
 pip install requests packaging wikitextparser python-dateutil certifi --upgrade
