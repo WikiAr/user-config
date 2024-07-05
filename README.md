@@ -19,7 +19,7 @@ ln -s $HOME/pyvenv $HOME/local -v
 
 ````
 
-# updte packages
+# update packages
 ```` Shell
 rm -rf shs/pips.sh
 rm updatepips.err updatepips.out
