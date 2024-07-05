@@ -14,6 +14,12 @@ toolforge jobs run py311 --command "cd $PWD && ./py_311.sh" --image python3.11 -
 ````
 # Extra
 ```` Shell
+
+mv pyvenv/lib/python3.11/site-packages pyvenv/lib/python3.11/site-packages1 -v
+
+cp -r local/lib/python3.11/site-packages pyvenv/lib/python3.11
+
+
 mv local old_local -v
 ln -s $HOME/pyvenv $HOME/local -v
 
