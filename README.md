@@ -3,11 +3,12 @@
 # python 11
 ```` Shell
 rm -rf bootstrap_venv.sh py_311.sh
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/bootstrap_venv.sh
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/py_311.sh
 chmod ug+x bootstrap_venv.sh
-chmod ug+x py_311.sh
+wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/bootstrap_venv.sh
 toolforge jobs run bootstrap-venv --command "cd $PWD && ./bootstrap_venv.sh" --image python3.11 --wait
+
+wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/py_311.sh
+chmod ug+x py_311.sh
 toolforge jobs run py311 --command "cd $PWD && ./py_311.sh" --image python3.11 --wait
 
 ````

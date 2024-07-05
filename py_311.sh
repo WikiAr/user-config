@@ -13,12 +13,10 @@ pip install -r c8/requirements.txt
 python3 -m pip list --outdated
 python3 -m pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs -n1 ./pyvenv/bin/pip311 install -U
 
-echo 'export PATH=$HOME/pyvenv/bin:$HOME/pyvenv/bin:/usr/pyvenv/bin:/usr/bin:/bin' > ~/.bash_profile
+echo 'export PATH=$HOME/local/bin:$HOME/local/bin:/usr/local/bin:/usr/bin:/bin' > ~/.bash_profile
 
 python3 -m pip install -r requirements_311.txt
 python3 -m pip install -r last_req.txt
-
-# echo 'export PATH=$HOME/pyvenv/bin:$HOME/pyvenv/bin:/usr/pyvenv/bin:/usr/bin:/bin' > ~/.bash_profile
 
 ln -s /usr/bin/toolforge      $HOME/pyvenv/bin/tf
 ln -s /usr/bin/toolforge-jobs $HOME/pyvenv/bin/tfj
