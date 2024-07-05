@@ -20,7 +20,3 @@ echo 'export PATH=$HOME/local/bin:$HOME/local/bin:/usr/local/bin:/usr/bin:/bin' 
 
 # python3 -m pip install -r requirements_311.txt
 python3 -m pip install -r last_req.txt
-
-ln -s /usr/bin/toolforge      $HOME/pyvenv/bin/tf
-ln -s /usr/bin/toolforge-jobs $HOME/pyvenv/bin/tfj
-ln -s /usr/bin/toolforge-webservice $HOME/pyvenv/bin/tfw

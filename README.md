@@ -24,6 +24,12 @@ cp -r local/lib/python3.11/site-packages pyvenv/lib/python3.11
 mv local old_local -v
 ln -s $HOME/pyvenv $HOME/local -v
 
+
+ln -s /usr/bin/toolforge      $HOME/pyvenv/bin/tf
+ln -s /usr/bin/toolforge-jobs $HOME/pyvenv/bin/tfj
+ln -s /usr/bin/toolforge-webservice $HOME/pyvenv/bin/tfw
+
+
 ````
 
 # update packages
