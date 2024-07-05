@@ -23,7 +23,7 @@ toolforge jobs list
 
 # only python 11
 ```` Shell
-rm -rf bootstrap_venv.sh
+rm -rf bootstrap_venv.sh py_311.sh
 wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/bootstrap_venv.sh
 wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/py_311.sh
 chmod ug+x bootstrap_venv.sh
