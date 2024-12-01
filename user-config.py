@@ -25,6 +25,7 @@ user_script_paths = [
     '/data/project/himo/bots/mv_bots/',
     '/data/project/himo/bots/ma/',
     '/data/project/himo/bots/new/',
+    '/data/project/himo/bots/asa_core/',
     '/data/project/himo/bots/stub_bots/',
     '/data/project/himo/bots/core1/',
     '/data/project/himo/bots/core_cat/',
