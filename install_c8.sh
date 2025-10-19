@@ -15,21 +15,21 @@ rm -rf ./c8
 # Rename the extracted pywikibot-master directory to c8
 mv ./pywikibot-master ./c8
 
-# Set the file permissions to 6770 for the c8 directory and its contents
-chmod -R 6770 ./c8
+# Set the file permissions to 770 for the c8 directory and its contents
+chmod -R 770 ./c8
 
 # Copy the 404-links.txt file from /data/project/himo/core8/ to the c8 directory
 cp /data/project/himo/core8/404-links.txt ./c8/404-links.txt
 
-# Set the file permissions to 6770 for the c8 directory and its contents
-chmod -R 6770 ./c8
+# Set the file permissions to 770 for the c8 directory and its contents
+chmod -R 770 ./c8
 
 # rm -rf ./user-config.py
 
 # download https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py to user-config.py
 # wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py
 
-chmod -R 6770 ./user-config.py
+chmod -R 770 ./user-config.py
 
 python3.11 -m pip install -r c8/requirements.txt
  
