@@ -26,12 +26,12 @@ chmod -R 770 ./c8
 
 # rm -rf ./user-config.py
 
-# download https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py to user-config.py
-# wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py
+# download https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py to user-config.py
+# wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py
 
 chmod -R 770 ./user-config.py
 
 python3.11 -m pip install -r c8/requirements.txt
- 
+
 # Run the pwb.py script with the API/txtlib argument using Python 3.11
 python3.11 c8/pwb.py API/txtlib

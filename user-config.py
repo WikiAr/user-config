@@ -1,12 +1,12 @@
 """
 
 
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/himo/user-config.py
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/sanaa/user-config.py
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/lyan/user-config.py
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/suha/user-config.py
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/nada/user-config.py
-wget https://raw.githubusercontent.com/MrIbrahem/user-config/main/user-config.py -O /data/project/himowd/user-config.py
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/himo/user-config.py
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/sanaa/user-config.py
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/lyan/user-config.py
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/suha/user-config.py
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/nada/user-config.py
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/himowd/user-config.py
 
 
 """
