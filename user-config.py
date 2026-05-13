@@ -62,7 +62,7 @@ for _u_path in user_script_paths.copy():
 
 from logging_config import setup_logging as _setup_logging  # noqa: E402
 
-bots = [
+_bots = [
     "alabel",
     "API",
     "api_page",
@@ -156,5 +156,5 @@ bots = [
     "wiki_api",
 ]
 
-for _bot in bots:
+for _bot in _bots:
     _setup_logging(name=_bot, level="INFO")
