@@ -23,8 +23,8 @@ _user_script_paths_file = Path("/data/project/himo/c9/users_paths.json")
 user_script_paths = []
 # ---
 if _user_script_paths_file.exists():
-    with open(_user_script_paths_file, 'r') as f:
-        user_script_paths = _json.load(f)
+    with open(_user_script_paths_file, 'r') as _f:
+        user_script_paths = _json.load(_f)
 # ---
 _ver = sys.version_info[:3]
 _python_v = str(_ver[0]) + str(_ver[1]) + str(_ver[2])
