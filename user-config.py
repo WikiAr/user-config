@@ -1,17 +1,15 @@
 """
-
-
-wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/himo/user-config.py
-wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/sanaa/user-config.py
-wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/lyan/user-config.py
-wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/suha/user-config.py
-wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/nada/user-config.py
-wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/himowd/user-config.py
-
-
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/himo/user-config.py -v
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/sanaa/user-config.py -v
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/lyan/user-config.py -v
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/suha/user-config.py -v
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/nada/user-config.py -v
+wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-config.py -O /data/project/himowd/user-config.py -v
 """
 import sys
 import os
+import json
+from pathlib import Path
 # ---
 family = 'wikipedia'
 mylang = 'ar'
@@ -21,20 +19,12 @@ usernames['wikidata']['www'] = 'Mr.Ibrahembot'  # type: ignore # noqa: F821
 db_connect_file = user_home_path('replica.my.cnf')  # type: ignore # noqa: F821
 password_file = None
 
-user_script_paths = [
-    '/data/project/himo/bots/asa_core/',
-    '/data/project/himo/bots/cats_maker/',
-    '/data/project/himo/bots/core1/',
-    '/data/project/himo/bots/core_cat/',
-    '/data/project/himo/bots/dump_core/',
-    '/data/project/himo/bots/ma/',
-    '/data/project/himo/bots/master2/',
-    '/data/project/himo/bots/mv_bots/',
-    '/data/project/himo/bots/new/',
-    '/data/project/himo/bots/stub_bots/',
-    '/data/project/himo/bots/wd_core/',
-    '/data/project/himo/bots/',
-]
+user_script_paths_file = Path("/data/project/himo/c9/users_paths.json")
+user_script_paths = []
+# ---
+if user_script_paths_file.exists():
+    with open(user_script_paths_file, 'r') as f:
+        user_script_paths = json.load(f)
 # ---
 _ver = sys.version_info[:3]
 _python_v = str(_ver[0]) + str(_ver[1]) + str(_ver[2])
