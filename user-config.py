@@ -8,7 +8,7 @@ wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/user-c
 """
 import sys
 import os
-import json
+import json as _json
 from pathlib import Path
 # ---
 family = 'wikipedia'
@@ -19,12 +19,12 @@ usernames['wikidata']['www'] = 'Mr.Ibrahembot'  # type: ignore # noqa: F821
 db_connect_file = user_home_path('replica.my.cnf')  # type: ignore # noqa: F821
 password_file = None
 
-user_script_paths_file = Path("/data/project/himo/c9/users_paths.json")
+_user_script_paths_file = Path("/data/project/himo/c9/users_paths.json")
 user_script_paths = []
 # ---
-if user_script_paths_file.exists():
-    with open(user_script_paths_file, 'r') as f:
-        user_script_paths = json.load(f)
+if _user_script_paths_file.exists():
+    with open(_user_script_paths_file, 'r') as f:
+        user_script_paths = _json.load(f)
 # ---
 _ver = sys.version_info[:3]
 _python_v = str(_ver[0]) + str(_ver[1]) + str(_ver[2])

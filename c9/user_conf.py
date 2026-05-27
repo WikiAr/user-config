@@ -9,7 +9,7 @@ wget https://raw.githubusercontent.com/WikiAr/user-config/refs/heads/main/c9/use
 import sys
 import os
 from pathlib import Path
-import json
+import json as _json
 from logger_config import setup_logging as _setup_logging  # type: ignore
 # ---
 from dotenv import load_dotenv
@@ -50,12 +50,12 @@ user_script_paths = [
 this_dir = Path(__file__).parent
 # ---
 if str(this_dir).startswith("/mnt/") or str(this_dir).startswith("/data/"):
-    user_script_paths_file = Path("/data/project/himo/c9/users_paths.json")
+    _user_script_paths_file = Path("/data/project/himo/c9/users_paths.json")
     user_script_paths = []
     # ---
-    if user_script_paths_file.exists():
-        with open(user_script_paths_file, 'r') as f:
-            user_script_paths = json.load(f)
+    if _user_script_paths_file.exists():
+        with open(_user_script_paths_file, 'r') as f:
+            user_script_paths = _json.load(f)
 # ---
 _ver = sys.version_info[:3]
 _python_v = str(_ver[0]) + str(_ver[1]) + str(_ver[2])
