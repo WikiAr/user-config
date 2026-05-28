@@ -42,7 +42,6 @@ except Exception:
 # ---
 print(_blue_ % 'PYTHON VERSION' + ': ' + _red_ % _python_v, _ver_)
 # ---
-
 for _u_path in user_script_paths.copy():
     if os.path.exists(_u_path):
         sys.path.append(os.path.abspath(_u_path))
@@ -50,9 +49,10 @@ for _u_path in user_script_paths.copy():
         print(f"user-config.py, path not exists:{_red_ % _u_path}")
         user_script_paths.remove(_u_path)
 
-from logging_config import setup_logging as _setup_logging  # noqa: E402
+from logging_config import setup_logging as _setup_logging  # type: ignore # noqa: E402
 
 _bots = [
+    "__main__",
     "alabel",
     "API",
     "api_page",
@@ -65,8 +65,8 @@ _bots = [
     "auths",
     "b18_new",
     "bots_helps",
-    "bots_src",
     "bots_mv_all",
+    "bots_src",
     "c18",
     "c18_new",
     "c30",
@@ -75,24 +75,32 @@ _bots = [
     "cite",
     "config",
     "copy_to",
+    "core1.src",
     "cos",
     "cy",
     "d_30",
     "day19",
     "dbs",
+    "dbs_not_yet",
     "des",
     "desc_dicts",
     "dump26",
     "dump27",
+    "dump_files",
     "dump_lua",
     "fals",
     "fix_cs1",
     "fotball",
     "helps",
     "himo_api",
+    "hrr4",
     "ill",
     "ill_add",
+    "imgx",
+    "info",
     "infobox",
+    "jsons",
+    "lex-examples",
     "likeapi",
     "ment",
     "mk_cats",
@@ -101,6 +109,8 @@ _bots = [
     "mm2",
     "most",
     "mv_it",
+    "mvafrica",
+    "mw_api",
     "nav",
     "nep",
     "neq",
@@ -113,13 +123,19 @@ _bots = [
     "petscan",
     "portal",
     "portalpages",
+    "pr",
     "prop",
     "prop_labs",
     "prope",
     "qlever_dumps",
     "refgroups",
     "refn",
+    "results",
+    "rice4",
+    "src",
     "rice3",
+    "rice4",
+    "src",
     "stub",
     "stub1",
     "stub_files_bots",
@@ -144,6 +160,7 @@ _bots = [
     "wd_utils",
     "WDYe",
     "wiki_api",
+    "wikiapi",
 ]
 
 for _bot in _bots:
